@@ -1,0 +1,11 @@
+ps : lista os processos
+ps -e : lista todos os processos de outros bash
+ps -ef : lista todos os processos de outros bash com mais informações
+grep "palavra" : caça a palavra 
+kill "processo" : mata o processo
+top: igual o gerenciador de tarefas do windows
+exemplo: ps -e | grep firefox : | é um E
+pstree? : arvore dos processos
+sh "nome do arquivo" : sh executa scripts
+locate "nome do arquivo" : localiza o arquivo
+mv "diretorio A" "diretorio B": mover arquivo de A para B

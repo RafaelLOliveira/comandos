@@ -1,0 +1,35 @@
+docker ps: ve containers ativos
+docker ps -a: ve conteiners que ja estiveram ativos
+docker run -it ubuntu: atrela o terminal ao container 
+docker start "container id" : inicia conteiner parado
+docker stop "container id": para conteiner
+docker start -a -i "container id": inicia container, -a = attached, -i = interativo
+docker rm "container id: deleta containers
+docker rmi "imagem": remove imagem
+docker container prune: remove todos o containers inativos
+
+docker run "user name"/"nome da imagem"
+docker run -d "user name"/"nome da imagem": o -d roda a imagem separada do terminal
+docker run -d  -P "user name"/"nome da imagem": o -P atribui portas aleatorias ao container
+docker run --name "nome do container" "user name"/"nome da imagem" : vc da nome ao container
+docker port "container id" : mostra as portas do container
+docker run -v : -v cria conteiner
+docker run -it: -it executa conteiner no modo iterativo
+-p 8080:3000  : eu quero que a porta 8080 do meu computador seja a porta 3000 do container
+
+exemplo: docker run -p 8080:3000 -v "C:\Users\rafol\Documents\Alura\Docker\:/var/www" -w "/var/www" node npm start
+
+exemplo: docker build  -f Dockerfile -t rafael/node: -t é a tag
+
+docker container exec it "id do container" bash
+
+docker container logs "container_id" 
+
+subir imagem no docker hub:
+docker login : login rafaeloliveira0 senha sep50847280
+docker push "nome da imagem" : subir imagem
+docker pull "nome da imagem" : baixar imagem
+
+criar rede:
+docker network create --driver bridge "nome da rede"
+exemplo: docker run -it --name meu-container-ubuntu --network "nome da rede" ubuntu : roda o container atrelando-o a rede criada
